@@ -7,7 +7,7 @@
 
 可自定义参数：  
 1、金钱整数位和小数位的大小。  
-<pre><code>　　self.priceLabel.normalFont = [UIFont systemFontOfSize:10];     
+<pre><code>　　self.priceLabel.normalFont = [UIFont systemFontOfSize:10];   
 　　self.priceLabel.bigFont = [UIFont boldSystemFontOfSize:15];     
 </code></pre>
  
