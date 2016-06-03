@@ -33,17 +33,19 @@
 
 #pragma mark - Private Method
 /**
- *  设置原价和促销价
+ *  设置带有Title的原价和促销价
  */
 - (void)showOriginalPriceAndPromotionRate{
     self.priceLabel.text = @"";
     self.priceLabel.textAlignment = NSTextAlignmentCenter;
     self.priceLabel.backgroundColor = [UIColor blueColor];
+    self.priceLabel.labelTitleColor = [UIColor blackColor];
     self.priceLabel.currentPriceColor = [UIColor orangeColor];
     self.priceLabel.originalPriceColor = [UIColor lightGrayColor];
+    self.priceLabel.labelTitleFont = [UIFont boldSystemFontOfSize:14];
     self.priceLabel.normalFont = [UIFont systemFontOfSize:10];
     self.priceLabel.bigFont = [UIFont boldSystemFontOfSize:15];
-    [self.priceLabel setCurrentPrice:@"55.00" originalPrice:@"100.00"];
+    [self.priceLabel setLabelTitle:@"合计：" currentPrice:@"55.00" originalPrice:@"100.00"];
 }
 
 /**

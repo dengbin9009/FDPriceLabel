@@ -49,13 +49,23 @@
 }
 
 - (void)setCurrentPrice:(NSString *)currentPrice originalPrice:(NSString *)originalPrice{
+    [self setLabelTitle:@"" currentPrice:currentPrice originalPrice:originalPrice];
+}
+
+- (void)setLabelTitle:(NSString *)labelTitle currentPrice:(NSString *)currentPrice originalPrice:(NSString *)originalPrice{
+    UIColor *labelTitleColor = self.labelTitleColor?:[UIColor blackColor];
     UIColor *currentPriceColor = self.currentPriceColor?:[UIColor redColor];
     UIColor *originalPriceColor = self.originalPriceColor?:[UIColor lightGrayColor];
+    
+    UIFont *labelTitleFont = self.labelTitleFont?:[UIFont boldSystemFontOfSize:14];
     UIFont *normalFont = self.normalFont?:[UIFont systemFontOfSize:10];
     UIFont *bigFont = self.bigFont?:[UIFont boldSystemFontOfSize:15];
     
     NSMutableAttributedString *labelText = [[NSMutableAttributedString alloc]initWithString:@""];
     
+    NSMutableAttributedString *labelTitleAttributedString = [[NSMutableAttributedString alloc]initWithString:labelTitle attributes:@{NSFontAttributeName:labelTitleFont,NSForegroundColorAttributeName:labelTitleColor}];
+    [labelText appendAttributedString:labelTitleAttributedString];
+
     NSAttributedString *currentPriceAttributedString = [self priceStringFromTextString:currentPrice textColor:currentPriceColor normalFont:normalFont bigFont:bigFont];
     
     [labelText appendAttributedString:currentPriceAttributedString];
