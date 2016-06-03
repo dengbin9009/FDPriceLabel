@@ -12,7 +12,7 @@
 </code></pre>
  
 2、原价和促销价的颜色  
-<pre><code> 　　self.priceLabel.currentPriceColor = [UIColor orangeColor];  
+<pre><code> 　　self.priceLabel.currentPriceColor = [UIColor orangeColor];   
 　　self.priceLabel.originalPriceColor = [UIColor lightGrayColor];  
 </code></pre>
 
